@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/homeFragment">
+    <fragment android:id="@+id/homeFragment" android:name="fr.mtp.opendatamtp.HomeFragment"
+              android:label="fragment_home" tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_homeFragment_to_randomFragment2" app:destination="@id/randomFragment2"/>
+    </fragment>
+    <fragment android:id="@+id/randomFragment2" android:name="fr.mtp.opendatamtp.RandomFragment"
+              android:label="fragment_number_view" tools:layout="@layout/fragment_number_view">
+        <action android:id="@+id/action_randomFragment2_to_homeFragment" app:destination="@id/homeFragment"/>
+        <argument android:name="count" app:argType="integer"/>
+    </fragment>
+</navigation>
